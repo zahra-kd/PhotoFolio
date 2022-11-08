@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+:root{
+    --green: #27a776;
+    --lightgreen: #20c997;
+}
+.navbar-brand {
+    font-family: cardo;
+}
+.nav-link:hover {
+    color: white !important;
+}
+.dropdown-item:hover {
+    background-color: transparent;
+    color: white !important;
+}
+.navbar {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+/*-------------------main : page principale----------------------*/
+.introduction {
+    margin-top: 80px;
+}
+.introduction h1 {
+    font-family: cardo;
+}
+.introduction h1 span{
+    position: relative;
+}
+.introduction h1 span::before {
+    content: "";
+    position: absolute;
+    height: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--green);
+    z-index: -1;
+}
+.main_container section {
+    position: relative;
+}
+.main_container section button {
+    background-color: var(--green);
+}
+.main_container section button:hover {
+    background-color: var(--lightgreen);
+}
+.cards img{
+    transition: 0.5s;
+}
+.cards:hover img {
+    transform: scale(1.2);
+}
+.cards div:hover {
+    background-color: rgba(0, 0, 0, 0.213) !important;
+    opacity: 1 !important;
+}
+/*-----------------------------main : contact page---------------------*/
+.contact_icone {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+.contact_icone i {
+    position: absolute;
+    top: 15%;
+    right: 25%;
+    color: var(--green);
+}
+.contact_icone:hover {
+    background-color: var(--lightgreen);
+}
+.contact_icone:hover i{
+    color: white !important;
+}
+.contact_input:focus {
+    box-shadow: none !important;
+}
+/*-------------------------------main : about page-----------------------------------*/
+#about h2 {
+    color: #27a776;
+}
+.bi-chevron-right {
+    color: var(--green);
+    margin-right: 4px   ;
+}
+.paragraph::after{
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: var(--green);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-left: 10px;
+    display: inline-block;
+}
+.bi-star-fill {
+    color: rgb(233, 226, 21);
+}
+.about_picture {
+    width: 80px;
+}
+/*-------------------------------------------main: services page--------------------------------------------*/
+.services_icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--green);
+}
+.services_box {
+    z-index: 1;
+}
+.services_box::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: var(--green);
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    overflow: hidden;
+    height: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+.services_box:hover::after {
+    bottom: 0;
+    height: 100%;
+    
+}
+.services_box:hover .services_icon {
+    background-color: white;
+}
+.services_box:hover .services_icon i {
+    color: var(--green);
+}
